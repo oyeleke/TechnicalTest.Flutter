@@ -1,0 +1,81 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5799014750673564419",
+      "lastPropertyId": "4:8686540135349034486",
+      "name": "Post",
+      "properties": [
+        {
+          "id": "1:2008199896876861598",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:7108273928952570006",
+          "name": "userId",
+          "type": 6
+        },
+        {
+          "id": "3:8261665857947789317",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "4:8686540135349034486",
+          "name": "body",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:5424855982563389583",
+      "lastPropertyId": "5:6676637631605808933",
+      "name": "PostCommentModel",
+      "properties": [
+        {
+          "id": "1:4384668407214205170",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:3522429728864059658",
+          "name": "postId",
+          "type": 6
+        },
+        {
+          "id": "3:295915271543980764",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:5302537917428918373",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "5:6676637631605808933",
+          "name": "body",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:5424855982563389583",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
