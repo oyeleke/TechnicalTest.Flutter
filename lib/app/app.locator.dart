@@ -9,6 +9,12 @@
 
 import 'package:stacked_shared/stacked_shared.dart';
 
+import '../data/repositories/post_comment_repository/post_comment_remote_repository.dart';
+import '../data/repositories/posts_repository/post_local_repository.dart';
+import '../data/repositories/posts_repository/post_remote_repository.dart';
+import '../data/services/api_service.dart';
+import '../data/services/database_service.dart';
+
 final locator = StackedLocator.instance;
 
 Future<void> setupLocator({
@@ -20,4 +26,12 @@ Future<void> setupLocator({
       environment: environment, environmentFilter: environmentFilter);
 
 // Register dependencies
+  locator.registerLazySingleton(() => ApiService());
+  locator.registerLazySingleton<DatabaseService>(() => DatabaseServiceImpl());
+  locator.registerLazySingleton<PostRemoteRepository>(
+      () => PostRemoteRepositoryImpl());
+  locator.registerLazySingleton<PostLocalRepository>(
+      () => PostLocalRepositoryImpl());
+  locator.registerLazySingleton<PostCommentRemoteRepository>(
+      () => PostCommentRemoteRepositoryImpl());
 }

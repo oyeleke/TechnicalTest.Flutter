@@ -1,4 +1,6 @@
 import 'package:flutter_tech_task/data/models/post_model.dart';
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
 
 import '../../objectbox.g.dart';
 import '../models/post_comment_model.dart';
@@ -26,6 +28,7 @@ class DatabaseServiceImpl extends DatabaseService {
 
   @override
   Future initializeDb() async {
-    _store = await openStore(directory: "app-db");
+    final docsDir = await getApplicationDocumentsDirectory();
+    _store = await openStore(directory: p.join(docsDir.path, "app-db"));
   }
 }
