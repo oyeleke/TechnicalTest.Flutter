@@ -18,6 +18,7 @@ dependencies:
   freezed_annotation: ^3.1.0
   stacked_services: ^1.6.0
   objectbox: ^4.3.1
+  path_provider: ^2.0.11
   objectbox_sync_flutter_libs: any
 
 dev_dependencies:
