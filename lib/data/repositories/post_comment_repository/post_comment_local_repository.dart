@@ -3,6 +3,7 @@ import 'package:flutter_tech_task/data/models/post_comment_model.dart';
 import 'package:flutter_tech_task/data/services/database_service.dart';
 import 'package:flutter_tech_task/objectbox.g.dart';
 
+import '../../../generated/l10n.dart';
 import '../../../utils/app_exceptions.dart';
 import '../../../utils/result.dart';
 
@@ -35,7 +36,7 @@ class PostCommentLocalRepositoryImpl extends PostCommentLocalRepository {
         return const Result.success(data: true);
       } else {
         return Result.failure(
-            error: DatabaseException(message: "No comments deleted"));
+            error: DatabaseException(message: S.current.noCommentsDeleted));
       }
     } catch (e) {
       return Result.failure(error: DatabaseException());
@@ -65,7 +66,7 @@ class PostCommentLocalRepositoryImpl extends PostCommentLocalRepository {
     } catch (e) {
       return Result.failure(
           error: DatabaseException(
-              message: "An error occurred while saving comments"));
+              message: S.current.anErrorOccurredWhileSavingComments));
     }
   }
 }

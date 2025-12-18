@@ -6,6 +6,7 @@ import 'package:flutter_tech_task/utils/result.dart';
 
 import '../app/app.locator.dart';
 import '../data/models/post_model.dart';
+import '../generated/l10n.dart';
 
 class SavePostUseCase {
   final PostLocalRepository _postLocalRepository =
@@ -64,7 +65,7 @@ class SavePostUseCase {
       };
     } catch (e) {
       return Result.failure(
-        error: AppException(message: "Unable to delete post"),
+        error: AppException(message: S.current.unableToDeletePosts),
       );
     }
   }

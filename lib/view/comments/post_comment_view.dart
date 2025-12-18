@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tech_task/view/comments/post_comment_view_model.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../generated/l10n.dart';
 import '../../utils/error_message_widget.dart';
 import '../../utils/loading_widget.dart';
 import '../../utils/ui_state.dart';
@@ -20,7 +21,7 @@ class PostCommentView extends StatelessWidget {
         final uiState = model.postCommentUiStateHolder.uiState;
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Comments"),
+            title:  Text(S.current.comments),
           ),
           body: switch (uiState) {
             ViewData() => Padding(

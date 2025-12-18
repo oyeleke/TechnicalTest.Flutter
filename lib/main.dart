@@ -4,6 +4,7 @@ import 'package:flutter_tech_task/data/services/database_service.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import 'app/app.locator.dart';
+import 'generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,6 +26,11 @@ class MyApp extends StatelessWidget {
       ),
       navigatorKey: StackedService.navigatorKey,
       onGenerateRoute: StackedRouter().onGenerateRoute,
+      localizationsDelegates: const [
+        S.delegate,
+      ],
+      locale: const Locale('en'),
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }

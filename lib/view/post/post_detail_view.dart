@@ -7,6 +7,7 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../data/models/post_model.dart';
+import '../../generated/l10n.dart';
 import '../../utils/error_message_widget.dart';
 import '../../utils/loading_widget.dart';
 import '../../utils/ui_state.dart';
@@ -45,7 +46,7 @@ class _PostDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Post Details"),
+        title:  Text(S.current.postDetails),
         actions: [PostSaveButton(post: post)],
       ),
       body: Container(
@@ -64,7 +65,7 @@ class _PostDetailView extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () => locator<NavigationService>().navigateToPostCommentView(postId: post.id),
-                  child: Text("View Comments"),
+                  child: Text(S.current.viewComments),
                 ),
               ],
             )

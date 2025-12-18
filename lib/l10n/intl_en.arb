@@ -1,0 +1,14 @@
+{
+  "@@locale": "en",
+  "home": "Home",
+  "posts": "Posts",
+  "savedPosts": "Saved Posts",
+  "viewComments": "View Comments",
+  "comments": "Comments",
+  "postDetails": "Post Details",
+  "unableToDeletePosts": "Unable to delete post",
+  "anErrorOccurredWhileSavingComments": "An error occurred while saving comments",
+  "anErrorOccurredWhileSavingPost": "An error occurred while saving post",
+  "noCommentsDeleted": "No comments deleted",
+  "anUnexpectedErrorOccurred": "An unexpected error occurred"
+}

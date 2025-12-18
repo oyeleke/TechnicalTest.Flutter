@@ -2,6 +2,7 @@ import 'package:flutter_tech_task/app/app.locator.dart';
 import 'package:flutter_tech_task/data/services/database_service.dart';
 import 'package:flutter_tech_task/utils/app_exceptions.dart';
 
+import '../../../generated/l10n.dart';
 import '../../../utils/result.dart';
 import '../../models/post_model.dart';
 
@@ -73,7 +74,7 @@ class PostLocalRepositoryImpl extends PostLocalRepository {
       _postBox.put(post);
       return const Result<bool>.success(data: true);
     } catch (e) {
-      return Result.failure(error: DatabaseException(message: "An error occurred while saving post"));
+      return Result.failure(error: DatabaseException(message: S.current.anErrorOccurredWhileSavingPost));
     }
   }
 
