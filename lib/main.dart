@@ -1,10 +1,7 @@
-import 'dart:convert';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tech_task/app/app.router.dart';
 import 'package:flutter_tech_task/data/services/database_service.dart';
-import 'package:flutter_tech_task/view/home/home_view.dart';
-import 'package:http/http.dart' as http;
+import 'package:stacked_services/stacked_services.dart';
 
 import 'app/app.locator.dart';
 
@@ -26,8 +23,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeView(),
+      navigatorKey: StackedService.navigatorKey,
+      onGenerateRoute: StackedRouter().onGenerateRoute,
     );
   }
 }
-

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tech_task/app/app.locator.dart';
+import 'package:flutter_tech_task/app/app.router.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 import '../../data/models/post_model.dart';
 
@@ -10,7 +13,8 @@ class PostItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => () {},
+      onTap: () => locator<NavigationService>()
+          .navigateToPostDetailView(postId: post.id),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Column(

@@ -1,9 +1,9 @@
 import 'package:flutter_tech_task/app/app.locator.dart';
 import 'package:flutter_tech_task/data/models/post_model.dart';
 import 'package:flutter_tech_task/data/repositories/posts_repository/post_remote_repository.dart';
-import 'package:flutter_tech_task/utils/ui_state_holder.dart';
 import 'package:flutter_tech_task/utils/result.dart';
 import 'package:flutter_tech_task/utils/ui_state.dart';
+import 'package:flutter_tech_task/utils/ui_state_holder.dart';
 import 'package:stacked/stacked.dart';
 
 class PostViewModel extends ReactiveViewModel {

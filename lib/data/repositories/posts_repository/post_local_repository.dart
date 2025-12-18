@@ -15,6 +15,8 @@ abstract class PostLocalRepository {
   Future<Result<bool>> deleteSavedPost({required int postId});
 
   Future<Result<bool>> isPostSaved({required int postId});
+
+  Stream<Result<List<Post>>> fetchPostsStream();
 }
 
 class PostLocalRepositoryImpl extends PostLocalRepository {
@@ -73,5 +75,10 @@ class PostLocalRepositoryImpl extends PostLocalRepository {
     } catch (e) {
       return Result.failure(error: DatabaseException(message: "An error occurred while saving post"));
     }
+  }
+
+  @override
+  Stream<Result<List<Post>>> fetchPostsStream() async* {
+    yield* _postBox.query().watch(triggerImmediately: true).map((query) => Result.success(data: query.find()));
   }
 }
